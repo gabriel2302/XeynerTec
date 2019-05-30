@@ -21,7 +21,7 @@
                                </div>
                                
                                <div class="col-md-12 text-center ">
-                                  <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+                                  <button type="submit" class=" btn btn-block mybtn btn-primary">Login</button>
                                </div>
                                <div class="col-md-12 ">
                                   

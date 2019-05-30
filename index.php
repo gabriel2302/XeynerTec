@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* 
 Site: XeynerTec
@@ -9,7 +9,7 @@ Data: 19 de Junho, 2019
 /* Define a página atual pela URL */
 $pagina = 'inicio';
 
-if(isset($_GET['i'])){
+if (isset($_GET['i'])) {
 	$pagina = addslashes($_GET['i']);
 }
 
@@ -33,7 +33,10 @@ switch ($pagina) {
 	case 'blast':
 		include 'site/paginas/blast.php';
 		break;
-	
+	case 'login':
+		include 'site/paginas/login.php';
+		break;
+
 	default:
 		include 'site/paginas/inicio.php';
 		break;
