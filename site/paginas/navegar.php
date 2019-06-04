@@ -1,100 +1,69 @@
-<!-- Primeira parte -->
-<div id="main" class="center">
-	<span style="color:#9bbd46">- NAVEGAR -</span>
-	<h2>Explore nossa base de dados</h2>
-</div>
 
-<!-- Segunda parte -->
-<div id="navegar">
-	<div class="container">
+<link rel="stylesheet" href="public/css/lucascss/servico.css">
+<link rel="stylesheet" href="public/css/lucascss/style.css">
 
-		<!-- Criando a tabela -->
-		<table class="table table-condensed table-hover table-striped">
-			<thead>
-				<tr>
-					<th>#Seq</th>
-					<th>#PDB</th>
-					<th>PDB ID</th>
-					<th>Cadeia</th>
-					<th>Sequência</th>
-					<th>PDB download</th>
-				</tr>
-			</thead>
-			<tbody>
-			
-				<!-- Preenchendo a tabela -->
-				
-				<?php 
-				$arquivo = file("app/data/seq.fasta"); // Abrir arquivo de sequencias 
-				array_push($arquivo,">"); // Permite que o ultimo elemento seja inserido 
-				
-				$pdbid_anterior = "";
-				$sid = 0; //numero da sequencia
-				$pid = 0; //numero do pdb 
+   
+<!-- inicio -->
+<section id="portfolio">
+   <div class="container">
+      <div class="row">
 
-				// Para cada linha do arquivo de sequencia
-				foreach($arquivo as $linha){
+         <div class="col-md-12 col-sm-12">
+          
+            
+               <!-- iso section -->
+               <div class="iso-section wow fadeInUp" style="padding-top: 20px" data-wow-delay="1.6s">
 
-					// Se for o cabeçalho e diferente do anterior (salva uma unica cadeia)
-					// for id = 0: CONDIÇÃO ESPECIAL
-					if ($sid == 0){
+                   <hr>
 
-						// Detecta cabeçalho
-						if(substr($linha,0,1) == '>'){
-							
-							$info = explode("|",$linha);
-							$pdb_cadeia = explode(":", $info[0]);
-							$pdb_id = substr($pdb_cadeia[0], 1);
-							$cadeia = $pdb_cadeia[1];
-							$seq_atual = "";
-							if($pdbid_anterior != $pdb_id){
-								$pdbid_anterior = $pdb_id;
-								$pid++;
-							}
-							$sid++;
-						}
-						else{
-							$seq_atual .= $linha;
-						}
-					}
-					else{ 
+                   <h2 style="color:black"><big><b><b><big><big><big>Serviço</big></big></big></b></b></big></h2>
 
-						// Primeiro gravo toda a informação 
-						if(substr($linha,0,1) == '>'){ ?>
-							<tr <?php if($cadeia == "A"){ echo 'class="success"'; }?>>
-								<td><?php echo $sid; ?></td>
-								<td><?php echo $pid; ?></td>
-								<td><?php echo $pdb_id; ?></td>
-								<td><?php echo $cadeia; ?></td>
-								<td><pre><?php echo $seq_atual; ?></pre></td>
-								<td style="text-align:center">
-									<a href="app/data/pdb/<?php echo strtolower($pdb_id); ?>.pdb">
-										<span class="glyphicon glyphicon-download" aria-hidden="true"></span>
-									</a>
-								</td>
-							</tr>
+                   <hr>
+                        <!-- iso box section -->
+                        
+                        <div class="iso-box-section wow fadeInUp" data-wow-delay="1s">
+                           <div class="iso-box-wrapper col4-iso-box">
+                            
 
-						<?php 
-						
-							// Agora coleto a próxima linha
-							$info = explode("|",$linha);
-							$pdb_cadeia = explode(":", $info[0]);
-							$pdb_id = substr($pdb_cadeia[0], 1);
-							@$cadeia = $pdb_cadeia[1];
-							$seq_atual = "";
-							if($pdbid_anterior != $pdb_id){
-								$pdbid_anterior = $pdb_id;
-								$pid++;
-							}
-							$sid++;
-						}
-						else{
-							$seq_atual .= $linha;
-						}							
-					}		
-				}
-			?>
-			</tbody>
-		</table>
-	</div>
-</div>
+                              <div class="iso-box photoshop branding col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <img src= "public/img/painel.jpg" class="img-responsive"  style="width: 100%; height: 300px"alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <a href="sorvete1.html"><i class="fa fa-link"></i></a>
+                                                <h2><b><big><big><b>Montagem de Painéis</b><big></b><big></h2>
+                                             </div>
+                                       </div>
+                                 </div>
+                              </div>
+
+                              <div class="iso-box photoshop branding col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <img src="public/img/manutecao.jpg" style="width: 100%; height: 300px" class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <a href="sorvete2.html"><i class="fa fa-link"></i></a>
+                                                <h2><big><big><b><b>Manutenção Elétrica</b></b></big><big></h2>
+                                             </div>
+                                       </div>
+                                 </div>
+                              </div>
+
+                              <div class="iso-box photoshop branding col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <img src="public/img/instalacoes.jpg" class="img-responsive" style="width: 100%; height: 300px" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <a href="sorvete3.html"><i class="fa fa-link"></i></a>
+                                                <h2><big><b><big><big><b>Instalações Elétricas</b></b><big><big></big></h2>
+                                             </div>
+                                       </div>
+                                 </div>
+                             </div>                                                         
+                            </div>
+                        </div>
+               </div>
+         </div>
+      </div>
+   </div>
+</section>

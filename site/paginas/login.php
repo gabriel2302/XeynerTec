@@ -12,12 +12,12 @@
                    </div>
                        <form action="" method="post" name="login">
                                <div class="form-group">
-                                  <label for="exampleInputEmail1">Email</label>
-                                  <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ensira o seu email">
+                                  <label for="exampleInputEmail1">Ensira o seu Nome</label>
+                                  <input type="" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Nome:">
                                </div>
                                <div class="form-group">
-                                  <label for="exampleInputEmail1">Senha</label>
-                                  <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Ensira a sua senha">
+                                  <label for="exampleInputEmail1">Ensira a sua Senha</label>
+                                  <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Senha:">
                                </div>
                                
                                <div class="col-md-12 text-center ">
@@ -26,6 +26,9 @@
                                <div class="col-md-12 ">
                                   
                                </div>
+                               <div class="nav-item active">
+                                     <a class="nav-link " href="cadastro">Cadastrar</a>
+                                </div>
                                
                             </form>
                      
