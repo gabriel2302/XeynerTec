@@ -33,8 +33,13 @@ switch ($pagina) {
 	case 'blast':
 		include 'site/paginas/blast.php';
 		break;
+
 	case 'login':
 		include 'site/paginas/login.php';
+		break;
+
+	case 'cadastro':
+		include 'site/paginas/cadastro.php';
 		break;
 
 	default:

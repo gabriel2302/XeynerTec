@@ -1,18 +1,21 @@
 <!doctype html>
 <html>
 <head>
-	<title>betabase</title>
+	<title>XeynerTEC</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/css/all.min.css">
 	<link rel="stylesheet" href="public/css/style.css">
-	<link rel="shortcut icon" href="public/img/favicon.png" sizes="32x32" type="image/png">
+	<link rel="shortcut icon" href="public/img/logopequeno.svg" sizes="32x32" type="image/png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
+<?php 
+include_once "conexao.php"
 
+?>
 	<header>
 <!-- 	<nav class="navbar navbar-inverse navbar-fixed">
 		<div class="container">
@@ -42,22 +45,25 @@
 		</div>
 	</nav> -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="?i=inicio"><img id="logo" src="public/img/TesteXeyner.png"></a>
+
+	<div class="container">
+	
+		<a class="navbar-brand" href="?i=inicio"><img id="logo" src="public/img/drawing.svg"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
+		<div class="collapse navbar-collapse " id="conteudoNavbarSuportado" >
 			<ul class="navbar-nav  ml-md-auto" >
 				<li class="nav-item active">
-					<a class="nav-link" href="?i=sobre">Empresa<span class="sr-only">(página atual)</span></a>
+					<a class="nav-link" href="#presobre">Empresa<span class="sr-only">(página atual)</span></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="?i=navegar">Serviços</a>
+					<a class="nav-link" href="#preservicos">Serviços</a>
 				</li>
 				
 				<li class="nav-item active">
-					<a class="nav-link " href="?i=blast">Contato</a>
+					<a class="nav-link " href="#contato">Contato</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link " href="?i=login">Login</a>
@@ -65,5 +71,8 @@
 			</ul>
 
 		</div>
+		</div>
 	</nav>
+
 </header>
+

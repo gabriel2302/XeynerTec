@@ -5,6 +5,11 @@
          h1{
          font-family: 'Helvetica', cursive;
          }
+		
+		#login{
+			background: linear-gradient(100deg, #ffff90 20%,#ffffff 100%)
+		}
+
           .myform{
         margin-top: 60px;
         margin-bottom: 60px;
@@ -18,18 +23,14 @@
 		pointer-events: auto;
 		background-color: #fff;
 		background-clip: padding-box;
-		border: 1px solid rgba(0,0,0,.2);
-		border-radius: 1.1rem;
+		border: 1px solid rgba(0,0,0,1);
+		border-radius: 0.9rem;
 		outline: 0;
 		max-width: 500px;
 		 }
+
          .mybtn{
          border-radius:50px;
-         margin-bottom: 50px;
-         margin-top: 50px
+         margin-bottom: 25px;
+         margin-top: 45px
          }
-        
-      
-        
-        
-     

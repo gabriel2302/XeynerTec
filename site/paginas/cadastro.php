@@ -8,7 +8,7 @@
 <div id="cadastro">
 	<div class="container" style="margin-top: 60px; margin-bottom: 60px">
 		<form method="post" action="cadastroUsuarios">
-			<div class="form-row">
+			<div class="form-row" method="post" action="cadastroUsuario.php">
 				<div class="form-group col-md-6">
 					<label for="inputEmail4">Nome de usuário</label>
 					<input type="email" class="form-control" id="inputEmail4">
